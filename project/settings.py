@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "news.apps.NewsConfig",
+    "news",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = "project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [Path(BASE_DIR, "news/template/news")],
+        "DIRS": [BASE_DIR / "news/templates/news/"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
